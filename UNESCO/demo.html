@@ -1,0 +1,48 @@
+<!--
+UNESCO ICH embed (WordPress)
+1) Nahraj JSON (např. ich001_pa_min_cs_fixed.json) do WP Média a zkopíruj URL.
+2) Uprav data-json="..." níže.
+3) Nahraj libDataUNESCO.js (např. do Média / na server) a uprav src="...".
+4) Celý tento blok vlož do WordPress „Vlastní HTML“.
+
+Poznámka ke kódování:
+- Ve WordPressu je stránka typicky UTF-8, takže čeština bude OK.
+- Pokud si tento soubor otevíráš lokálně jako demo, obal ho do plné HTML stránky s <meta charset="utf-8">.
+-->
+
+<div class="unesco-ich-app" data-unesco-ich
+     data-json="PASTE_JSON_URL_HERE">
+
+  <div class="unesco-ich-toolbar">
+    <label class="lbl">
+      <b>Jazyk:</b>
+      <select class="unesco-lang">
+        <option value="cs" selected>česky</option>
+        <option value="en">English (originál)</option>
+      </select>
+    </label>
+
+    <div class="unesco-ich-note">
+      Hover ukáže základní info, klik otevře detail dole.
+    </div>
+  </div>
+
+  <div class="unesco-ich-section">
+    <div data-ich-chart="scatter" class="unesco-ich-chart"></div>
+  </div>
+
+  <div class="unesco-ich-section">
+    <div data-ich-chart="kontinenty" class="unesco-ich-chart"></div>
+  </div>
+
+  <div class="unesco-ich-section">
+    <div data-ich-chart="top10" class="unesco-ich-chart"></div>
+  </div>
+
+  <div class="unesco-ich-section">
+    <div data-ich-chart="podil-konceptu" class="unesco-ich-chart"></div>
+  </div>
+
+</div>
+
+<script src="PASTE_LIBDATAUNESCO_JS_URL_HERE"></script>
